@@ -1,0 +1,24 @@
+{
+  "gdpr": {
+    "data_retention_days": 365,
+    "right_to_deletion": true,
+    "consent_tracking": true,
+    "data_minimization": true
+  },
+  "ccpa": {
+    "data_transparency": true,
+    "opt_out_mechanisms": true,
+    "data_sharing_disclosure": true
+  },
+  "hipaa": {
+    "encryption_at_rest": true,
+    "encryption_in_transit": true,
+    "audit_logging": true,
+    "access_controls": true
+  },
+  "sox": {
+    "change_management": true,
+    "access_logging": true,
+    "segregation_of_duties": true
+  }
+}

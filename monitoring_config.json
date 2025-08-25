@@ -1,0 +1,36 @@
+{
+  "metrics": {
+    "collection_interval": 15,
+    "retention_days": 90,
+    "endpoints": [
+      "/health",
+      "/metrics",
+      "/performance"
+    ]
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "json",
+    "aggregation": "elk_stack",
+    "retention_days": 30
+  },
+  "alerting": {
+    "channels": [
+      "email",
+      "slack",
+      "pagerduty"
+    ],
+    "thresholds": {
+      "cpu_utilization": 80,
+      "memory_utilization": 85,
+      "error_rate": 5,
+      "response_time_p95": 2000
+    }
+  },
+  "dashboards": [
+    "system_health",
+    "performance_metrics",
+    "quantum_operations",
+    "user_analytics"
+  ]
+}

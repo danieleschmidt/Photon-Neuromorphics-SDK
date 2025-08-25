@@ -1,0 +1,31 @@
+{
+  "global_deployment": {
+    "regions": {
+      "us-east-1": {
+        "primary": true,
+        "compute_nodes": 10
+      },
+      "eu-west-1": {
+        "primary": false,
+        "compute_nodes": 8
+      },
+      "ap-southeast-1": {
+        "primary": false,
+        "compute_nodes": 6
+      },
+      "us-west-2": {
+        "primary": false,
+        "compute_nodes": 8
+      }
+    },
+    "load_balancing": {
+      "strategy": "latency_based",
+      "health_check_interval": 30,
+      "failover_threshold": 3
+    },
+    "data_replication": {
+      "strategy": "async",
+      "consistency": "eventual"
+    }
+  }
+}

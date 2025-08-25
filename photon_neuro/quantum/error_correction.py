@@ -84,7 +84,7 @@ class SurfaceCode(StabilizerCode):
         Args:
             distance: Code distance (must be odd, ≥3)
         """
-        validate_parameter(distance, "distance", min_val=3)
+        validate_parameter("distance", distance, valid_range=(3, float('inf')))
         if distance % 2 == 0:
             raise QuantumError("Surface code distance must be odd")
             
